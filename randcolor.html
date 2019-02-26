@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>Random COlor</title>
+</head>
+<body>
+<script>
+function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+
+function setRandomColor() {
+  $("#colorpad").css("background-color", getRandomColor());
+  document.getElementById("result").innerHTML = getRandomColor(); 
+}
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<div id="colorpad" style="width:900px;height:900px;background-color:#000"></div>
+<p id="result"></p>
+<button id="result" onclick="setRandomColor()">Random Color</button>
+</body>
+</html>
