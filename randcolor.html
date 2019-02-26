@@ -12,15 +12,13 @@ function getRandomColor() {
   }
   return color;
 }
-
-
 function setRandomColor() {
   $("#colorpad").css("background-color", getRandomColor());
   document.getElementById("result").innerHTML = getRandomColor(); 
 }
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<div id="colorpad" style="width:900px;height:900px;background-color:#000"></div>
+<div id="colorpad" style="width:640px;height:640px;background-color:#000"></div>
 <p id="result"></p>
 <button id="result" onclick="setRandomColor()">Random Color</button>
 </body>
